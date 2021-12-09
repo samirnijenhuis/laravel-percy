@@ -1,0 +1,24 @@
+{
+    "name": "letspaak/laravel-percy",
+    "description": "Percy bridge for Laravel Dusk",
+    "type": "library",
+    "require": {
+        "php": "^8.0",
+        "laravel/dusk": "^6.19",
+        "illuminate/http": "^8.0",
+        "illuminate/support": "^8.0",
+        "illuminate/contracts": "^8.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Letspaak\\LaravelPercy\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Samir Nijenhuis",
+            "email": "samir@paak.io"
+        }
+    ]
+}
