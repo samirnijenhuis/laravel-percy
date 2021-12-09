@@ -4,7 +4,7 @@ namespace LetsPaak\LaravelPercy;
 
 use Illuminate\Http\Client\Factory;
 use Laravel\Dusk\Browser;
-use Letspaak\LaravelPercy\Contracts\Percy as PercyContract;
+use LetsPaak\LaravelPercy\Contracts\Percy as PercyContract;
 use RuntimeException;
 
 class PercyDusk implements PercyContract

@@ -5,7 +5,7 @@ namespace LetsPaak\LaravelPercy;
 use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Dusk\Browser;
-use Letspaak\LaravelPercy\Contracts\Percy;
+use LetsPaak\LaravelPercy\Contracts\Percy;
 
 class PercyServiceProvider extends ServiceProvider implements DeferrableProvider
 {
@@ -17,14 +17,18 @@ class PercyServiceProvider extends ServiceProvider implements DeferrableProvider
             'percy'
         );
 
-        $this->app->bind(Percy::class, fn() => PercyDusk::class);
+        $this->app->bind(Percy::class, PercyDusk::class);
     }
 
     public function boot(): void
     {
         if ($this->app->make('config')->get('percy.dusk')) {
             Browser::macro('snapshot', function () {
-                $this->app->make(Percy::class, ['browser' => $this])->snapshot(...func_get_args());
+                if ($percy = app(Percy::class, ['browser' => $this])) {
+                    $percy->snapshot(...func_get_args());
+                }
+                
+                return $this;
             });
         }
 
