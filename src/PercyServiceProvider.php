@@ -10,19 +10,19 @@ use Letspaak\LaravelPercy\Contracts\Percy;
 class PercyServiceProvider extends ServiceProvider implements DeferrableProvider
 {
 
-    public function register()
+    public function register(): void
     {
         $this->mergeConfigFrom(
-            __DIR__.'/../config/percy.php',
+            __DIR__ . '/../config/percy.php',
             'percy'
         );
 
         $this->app->bind(Percy::class, fn() => PercyDusk::class);
     }
 
-    public function boot()
+    public function boot(): void
     {
-        if($this->app->make('config')->get('percy.dusk')) {
+        if ($this->app->make('config')->get('percy.dusk')) {
             Browser::macro('snapshot', function () {
                 $this->app->make(Percy::class, ['browser' => $this])->snapshot(...func_get_args());
             });
@@ -30,7 +30,7 @@ class PercyServiceProvider extends ServiceProvider implements DeferrableProvider
 
     }
 
-    public function provides()
+    public function provides(): array
     {
         return [Percy::class];
     }
