@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Letspaak\LaravelPercy\Contracts;
+namespace LetsPaak\LaravelPercy\Contracts;
 
 interface Percy
 {

@@ -1,4 +1,5 @@
 # Use Percy.io in your Laravel testsuite
+This is an unofficial package to bring Percy to your Laravel testsuite, we are in no way related to Percy.io
 
 ## What It Does
 

@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Letspaak\LaravelPercy;
+namespace LetsPaak\LaravelPercy;
 
 use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider;
