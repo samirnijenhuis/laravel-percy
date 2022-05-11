@@ -1,11 +1,11 @@
 <?php declare(strict_types=1);
 
-namespace LetsPaak\LaravelPercy;
+namespace SamirNijenhuis\LaravelPercy;
 
 use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Dusk\Browser;
-use LetsPaak\LaravelPercy\Contracts\Percy;
+use SamirNijenhuis\LaravelPercy\Contracts\Percy;
 
 class PercyServiceProvider extends ServiceProvider implements DeferrableProvider
 {
