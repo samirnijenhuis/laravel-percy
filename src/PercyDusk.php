@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 
-namespace LetsPaak\LaravelPercy;
+namespace SamirNijenhuis\LaravelPercy;
 
 use Illuminate\Http\Client\Factory;
 use Laravel\Dusk\Browser;
-use LetsPaak\LaravelPercy\Contracts\Percy as PercyContract;
+use SamirNijenhuis\LaravelPercy\Contracts\Percy as PercyContract;
 use RuntimeException;
 
 class PercyDusk implements PercyContract
