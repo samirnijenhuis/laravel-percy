@@ -12,19 +12,19 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "LetsPaak\\LaravelPercy\\": "src/"
+            "SamirNijenhuis\\LaravelPercy\\": "src/"
         }
     },
     "authors": [
         {
             "name": "Samir Nijenhuis",
-            "email": "samir@paak.io"
+            "email": "samir@zypher.com"
         }
     ],
     "extra": {
         "laravel": {
             "providers": [
-                "LetsPaak\\LaravelPercy\\PercyServiceProvider"
+                "SamirNijenhuis\\LaravelPercy\\PercyServiceProvider"
             ]
         }
     }
