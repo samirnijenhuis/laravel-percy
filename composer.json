@@ -1,5 +1,5 @@
 {
-    "name": "letspaak/laravel-percy",
+    "name": "samirnijenhuis/laravel-percy",
     "description": "Percy bridge for Laravel Dusk",
     "type": "library",
     "require": {
